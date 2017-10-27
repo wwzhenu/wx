@@ -18,7 +18,7 @@ Route::get('/', function (Request $request) {
         $request->get('timestamp')
     );
     sort($parm,SORT_STRING);
-    $parm=sha1(implode('',$parm));
+    $parm=sha1(implode($parm));
     if ($parm==$request->get('signature')){
         echo $request->get('echostr');
     }else{
