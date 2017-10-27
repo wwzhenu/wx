@@ -15,7 +15,7 @@ Route::get('/', function (Request $request) {
     $parm=array(
         'wanglovechu',
         $request->get('timestamp'),
-        $request->get('timestamp')
+        $request->get('nonce')
     );
     file_put_contents('1.txt',print_r($parm,1));
     sort($parm,SORT_STRING);
